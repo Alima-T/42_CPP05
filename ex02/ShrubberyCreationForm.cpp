@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 11:47:38 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/09/27 00:19:02 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/09/27 00:58:28 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
 		return;
 	}
 	// file << "ASCII tree 🌳\n";  // настоящие ASCII-деревья
-	file << "    *\n";
+	file << "   *\n";
 	file << "   *\n";
     file << "  ***\n";
     file << " *****\n";
