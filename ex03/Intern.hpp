@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/27 01:02:12 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/09/27 01:09:35 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/09/27 01:16:23 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
 
-class Intern {
+class Intern 
+{
 public:
 	Intern();
 	Intern(const Intern& src);

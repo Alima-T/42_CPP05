@@ -6,14 +6,14 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/27 01:02:18 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/09/27 01:09:42 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/09/27 01:16:09 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Intern.hpp"
 
 Intern::Intern() {}
-Intern::Intern(const Intern& src) { (void)src; }
+Intern::Intern(const Intern& src) { (void)src;}
 Intern& Intern::operator=(const Intern& rhs) 
 {
 	(void)rhs;
@@ -44,7 +44,6 @@ AForm* Intern::makeForm(const std::string& formName, const std::string& target)
 			return creators[i](target);
 		}
 	}
-
 	std::cerr << "Error: Form \"" << formName << "\" does not exist" << std::endl;
 	return nullptr;
 }
