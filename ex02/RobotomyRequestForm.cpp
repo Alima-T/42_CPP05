@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/26 23:57:25 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/09/27 00:19:15 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/09/27 01:10:57 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,19 @@
 #include <ctime>     // для srand()
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string &target)
-    : AForm("RobotomyRequestForm", 72, 45), m_target(target) {}
+	: AForm("RobotomyRequestForm", 72, 45), m_target(target) {}
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &src)
-    : AForm(src), m_target(src.m_target) {}
+	: AForm(src), m_target(src.m_target) {}
 
 RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &rhs) 
 {
-    if (this != &rhs) 
+	if (this != &rhs) 
 	{
-        AForm::operator=(rhs);
-        m_target = rhs.m_target;
-    }
-    return *this;
+		AForm::operator=(rhs);
+		m_target = rhs.m_target;
+	}
+	return *this;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm() {}
@@ -49,16 +49,16 @@ static_cast<unsigned int>(...) превращает time_t в unsigned int.
 */
 void RobotomyRequestForm::execute(Bureaucrat const &executor) const 
 {
-    checkExecution(executor);
-    std::cout << "Bzzzzzz... drilling noises...\n";
-    // инициализация генератора случайных чисел (один раз в программе!)
-    static bool seeded = false;
-    if (!seeded) {
-        srand(static_cast<unsigned int>(time(NULL)));
-        seeded = true;
-    }
-    if (rand() % 2) // 50% of the time
-        std::cout << m_target << " has been robotomized successfully\n";
-    else
-        std::cout << "Robotomy failed for " << m_target << "\n";
+	checkExecution(executor);
+	std::cout << "Bzzzzzz... drilling noises...\n";
+	// инициализация генератора случайных чисел (один раз в программе!)
+	static bool seeded = false;
+	if (!seeded) {
+		srand(static_cast<unsigned int>(time(NULL)));
+		seeded = true;
+	}
+	if (rand() % 2) // 50% of the time
+		std::cout << m_target << " has been robotomized successfully\n";
+	else
+		std::cout << "Robotomy failed for " << m_target << "\n";
 }
