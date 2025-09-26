@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 11:46:34 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/09/26 23:44:13 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/09/27 00:41:45 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,17 @@ private:
 public:
     AForm(const std::string& name, int gradeSign, int gradeExec);
     virtual ~AForm() = default;
+	
+	std::string getName() const;
+    bool getIsSigned() const;
+    int getGradeToSign() const;
+    int getGradeToExecute() const;
 
     void beSigned(const Bureaucrat& b);
     virtual void execute(Bureaucrat const & executor) const = 0;
 
 	void checkExecution(Bureaucrat const & executor) const;
-	
+
     class HighGradeEx : public std::exception {
         const char* what() const throw();
     };

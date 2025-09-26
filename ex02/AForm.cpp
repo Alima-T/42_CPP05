@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/26 22:39:24 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/09/26 23:44:30 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/09/27 00:45:15 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,14 @@ AForm::AForm(const std::string& name, int gradeSign, int gradeExec)
 	else if (gradeSign > 150 || gradeExec > 150)
 		throw LowGradeEx();
 }
+std::string AForm::getName() const {return m_name;}
+
+bool AForm::getIsSigned() const {return m_isSigned;}
+
+int AForm::getGradeToSign() const {return m_gradeToSign;}
+
+int AForm::getGradeToExecute() const {return m_gradeToExecute;}
+
 const char* AForm::HighGradeEx::what() const throw()
 {
 	return "AForm Exception: Grade is too high (less than 1)";

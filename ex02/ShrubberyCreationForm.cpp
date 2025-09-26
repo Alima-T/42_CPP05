@@ -6,7 +6,7 @@
 /*   By: aokhapki <aokhapki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 11:47:38 by aokhapki          #+#    #+#             */
-/*   Updated: 2025/09/26 23:50:31 by aokhapki         ###   ########.fr       */
+/*   Updated: 2025/09/27 00:19:02 by aokhapki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
 	if (this != &rhs)
 	{
 		AForm::operator=(rhs);
-		this->m_target = rhs.m_target;
+		m_target = rhs.m_target;
 	}
 	return *this;
 }
